@@ -1,15 +1,52 @@
 p{
-    color: blueviolet;
-    background-color: goldenrod;
+    color: rgb(6, 6, 6);
+    background-color: white;
+}
+p::first-letter{
+    font-size: 1.5em;
+}
+.firstP{
+    display: inline-block;
 }
 h1{
-    color: blueviolet;
-    background-color: goldenrod;
+    color: rgb(175, 12, 12);
+    background-color: rgba(128, 128, 128, 0.493);
+    text-align: start;
+    padding: 15px 10px;
+    border-radius: 10px;
+    text-shadow: 1.2px 3px 3px rgba(0, 0, 0, 0.368);
 }
 head{
-    color: blueviolet;
-    background-color: goldenrod;
+    color: #c0392b;
+    background-color: white;
 }
 body{
-    background-color: pink;
+    margin: 30px ;
+    background-color: hsl(0, 0%, 100%);
+    
+}
+h2{
+    color: #d35400;
+    
+}
+
+strong {
+    color: rgb(247, 9, 5);
+    font-family: 'Times New Roman', Times, serif;
+}
+a:link{
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #c0392b;
+}
+.moveProduction{
+    color: rgb(208, 159, 11);
+    list-style-type: none;
+    text-indent: -40px;
+
+}
+.more{
+    color: #c0392b;
 }
