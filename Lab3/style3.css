@@ -1,0 +1,55 @@
+div {
+    display:flex
+}
+.table{
+    padding: 1px;
+    border: 1px solid black;
+}
+container {
+    border: 1px solid black;
+}
+th{
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+}
+
+.shopingOwner {
+    
+    color: rgb(5, 5, 5);
+    background-color: rgb(132, 58, 19);
+    padding-left: 35px;
+    text-decoration: dotted;
+}
+#total {
+    text-align: end;
+}
+body{
+    margin: 90px;
+    border: 1px solid black;
+}
+#container0 {
+    border-top: 1px solid rgb(3, 3, 3);
+    border-bottom:1px solid rgb(3, 3, 3);;
+    display: flex;
+    justify-content:space-around;
+    
+}
+.item {
+   margin-top: 6px;
+}
+.placeOrderButton {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row-reverse;
+   
+}
+.logOut {
+    border: 1px solid black;
+    width: 70px;
+    height: 30px;
+    margin: 6px;
+    text-align: center;
+}
+

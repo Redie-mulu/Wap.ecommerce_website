@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+        <link href="./style3.css" type="text/css" rel="stylesheet"/>
+
+</head>
+
+<body>
+    <p id="introduction">My shopint cart</p>
+
+    <div id = container0>
+        <!-- <div><img src="../cart3.svg" alt="cart"></div> -->
+        <div class="item"><img src="../happy.jpeg" alt="myHappyLog" width="50" height="40"/> </div>
+        <div class="item">Welcome, Rediet </div>
+        <div class="logOut">Log out</div>
+        
+    </div>
+  
+
+    <span class="shopingOwner">product list</span>
+    
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Node.js</th>
+                    <td>9.99</td>
+                    <td>8</td>
+                    <td><img src="../cart3.svg" alt="cart" width="40" height="30"></td>
+                </tr>
+                <tr>
+                    <th scope="row">React</th>
+                    <td>19.99</td>
+                    <td>5</td>
+                    <td><img src="../cart3.svg" alt="cart" width="40" height="30"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Angular</th>
+                    <td>29.9</td>
+                    <td>13</td>
+                    <td><img src="../cart3.svg" alt="cart" width="40" height="30"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <span class="shopingOwner">your shopping cart</span>
+    
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">price</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Node.js</th>
+                    <td>9.99</td>
+                    <td>9.99</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">Angular</th>
+                    <td>29.99</td>
+                    <td>290.99</td>
+                    <td>@fat</td>
+                </tr>
+                <tr id="total">
+                    <!-- <th scope="row">Angular</th> -->
+                    <td colspan="4">Total: 300.98</td>
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <span class="placeOrderButton">place order</span>
+</body>
+
+</html>
+
+

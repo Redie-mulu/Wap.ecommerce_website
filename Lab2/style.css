@@ -41,12 +41,20 @@ a:hover {
     text-decoration: underline;
     color: #c0392b;
 }
+.reverseOrder {
+    display: flex;
+    flex-direction: column-reverse;
+    /* transform: rotate(90deg); */
+}
 .moveProduction{
     color: rgb(208, 159, 11);
     list-style-type: none;
     text-indent: -40px;
+    flex: 0 0 auto;
+    
 
 }
 .more{
     color: #c0392b;
 }
+
