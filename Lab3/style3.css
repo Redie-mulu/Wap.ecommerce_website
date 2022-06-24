@@ -13,7 +13,7 @@ div {
     border: 1px solid rgb(235, 13, 13);
     background-color: #7ed6df
 }
-container {
+#mainContainer {
     border: 1px solid black;
 }
 th{
@@ -37,7 +37,6 @@ td{
 
 body{
     margin: 200px;
-    /* border: 1px solid black; */
     background-color: #c2eaf193;
 }
 #container0 {
@@ -51,12 +50,7 @@ body{
 .item {
    margin-top: 6px;
 }
-.placeOrderButton {
-    /* border: 1px solid black; */
-    
-    
-   
-}
+
 .logOutButton {
     border: 1px solid black;
     width: 70px;
