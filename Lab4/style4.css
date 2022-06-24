@@ -12,13 +12,12 @@
     margin: 100px;
     
 }
-.registration{
-    text-decoration: underline;
-    margin-top: 20px;
-    margin-left: 10px;
-}
+
 #levelOfExperiance{
     border: none;
+    background-color:#b3377115;
+    width: 100px;
+    margin-left: 20px;
 }
 .partOne{
     margin: 20px;
@@ -29,6 +28,16 @@
     justify-content: space-between;
    
 }
+.category{
+    font-weight: lighter;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+
 .questionnaire {
     margin-top: 25px;
     display: flex;
@@ -36,7 +45,6 @@
 }
 .last{
     margin-bottom: 25px;
-    display: block;
 }
 
 #finalSubmition{
@@ -51,13 +59,27 @@
 .det{
     font-weight: lighter;
 }
-.payment{
-    display: flex;
-    justify-content: baseline;
-    vertical-align:baseline;
 
-}
 .lastwraper{
     display: flex;
  
+}
+select{
+    width: 250px;
+}
+.checkbox{
+    display: flex;
+    margin-left: 255px;
+    font-weight: lighter;
+    font-size: 14px;
+    
+}
+.submition{
+    background-color: #B33771;
+    font-size: 15px; 
+}
+#checker{
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }

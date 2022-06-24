@@ -20,7 +20,7 @@
             </select>
         </div>
 
-        <div class="registration">Register now while seats are availablel</div>
+        <div class="category">Register now while seats are availablel</div>
 
         <form class="partOne">
             <div id="formSideOne">
@@ -28,42 +28,83 @@
                 <div class="questionnaire">Last Name <input type="text" name="LastName" size="35" required /> </div>
                 <div class="questionnaire">Company/Institution <input type="text" name="Company/Institution" size="35"
                         required /> </div>
-                <div class="questionnaire">Address <input type="text" name="Address" size="35" required /> </div>
+                <div class="questionnaire">Address <textarea rows="5" cols="28"></textarea> </div>
                 <div class="questionnaire">City <input type="text" name="city" size="35" /> </div>
-                <div class="questionnaire">State/Province/Region <input type="location" name="Address" size="35" />
+                <div class="questionnaire">State/Province/Region
+                    <select name="state">
+                        <option>-select-</option>
+                        <option value="1">Virginia</option>
+                        <option value="2">California</option>
+                        <option value="3">Iowa</option>
+                        <option value="4"> Chicago</option>
+
+                    </select>
                 </div>
-                <div class="questionnaire">Contry <input type="text" name="Contry" size="35" /> </div>
+                <div class="questionnaire">Country
+
+                    <select name="country">
+                        <option>-select-</option>
+                        <option value="1">USA</option>
+                        <option value="2">Ethiopia</option>
+                        <option value="3">Russia</option>
+                        <option value="4">dominican republic</option>
+
+                    </select>
+
+                </div>
+
                 <div class="questionnaire">Email <input type="text" name="Email" size="35" required /> </div>
                 <div class="questionnaire last">Phone Number <input type="text" name="phoneNum" size="35" required />
                 </div>
             </div>
             <div id="formSideOne">
-                <div class="registration det">Lunch</div>
-                <div class="questionnaire">Meal Preference<input type="text" name="firstName" size="35" required />
+                <div class="category">Lunch</div>
+                <div class="questionnaire">Meal Preference
+                    <select name="state">
+                        <option>-select-</option>
+                        <option value="1">Vegetarian</option>
+                        <option value="2">Meat</option>
+                        <option value="3">gluten-free</option>
+                        <option value="4"> halal</option>
+
+                    </select>
                 </div>
 
-                <div class="registration det">Payment</div>
+                <div class="category">Payment Details</div>
 
-                <div class="questionnaire payment">Payment Mode <input type="checkbox" name="Cash" size="35" /> Cash
-                    <input type="checkbox" name="Cheque" size="35" /> Cheque
-                    <input type="checkbox" name="Demand Draft" size="35" /> Demand Draft
+                <div class="two">Payment Mode </div>
+
+
+                <div class="checkbox"><input type="checkbox" name="Cash" size="35" /> Cash</div>
+                <div class="checkbox"><input type="checkbox" name="Cheque" size="35" /> Cheque</div>
+                <div class="checkbox"><input type="checkbox" name="Demand Draft" size="35" /> Demand Draft</div>
+
+                <div class="questionnaire">DD/Cheque No. <input type="text" name="Cheque" size="35" required />
                 </div>
-
-                <div class="questionnaire">DD/Cheque No. <input type="text" name="Cheque" size="35" required /> </div>
-
                 <div class="questionnaire">Drawn on(Bank Name) <input type="text" name="bankName" size="35" required />
                 </div>
                 <div class="questionnaire last">Payable at<input type="text" name="phoneNum" size="35" required />
                 </div>
             </div>
+
         </form>
 
         <form id="finalSubmition">
-            <input type="submit" />
-            <input type="reset" />
+            <input class="submition" type="submit" />
+            <input class="submition" type="reset" />
         </form>
 
     </div>
+
+    <div id="checker">
+        <a href=" https://validator.w3.org/nu/?doc=https%3A%2F%2Fredie-mulu.github.io%2FWap.github.io%2F">
+            <img src="../1200px-Valid_XHTML_1.0.svg.png" alt="validateor picture" width="100" height="40"/>
+         </a>
+         <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fredie-mulu.github.io%2FWap.github.io%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">
+            <img src="../css_checker.png" alt="validateor picture" width="100" height="40"/>
+         </a>
+
+    </div> 
 </body>
 
 </html>
