@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./style4.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="container">
+        <div class="introduction">Workshop Registration
+
+            <select id="levelOfExperiance" name="favoritecharacter">
+                <option>starter</option>
+                <option>junior</option>
+                <option selected>seniour</option>
+            </select>
+        </div>
+
+        <div class="registration">Register now while seats are availablel</div>
+
+        <form class="partOne">
+            <div id="formSideOne">
+                <div class="questionnaire">First Name <input type="text" name="firstName" size="35" required /></div>
+                <div class="questionnaire">Last Name <input type="text" name="LastName" size="35" required /> </div>
+                <div class="questionnaire">Company/Institution <input type="text" name="Company/Institution" size="35"
+                        required /> </div>
+                <div class="questionnaire">Address <input type="text" name="Address" size="35" required /> </div>
+                <div class="questionnaire">City <input type="text" name="city" size="35" /> </div>
+                <div class="questionnaire">State/Province/Region <input type="location" name="Address" size="35" />
+                </div>
+                <div class="questionnaire">Contry <input type="text" name="Contry" size="35" /> </div>
+                <div class="questionnaire">Email <input type="text" name="Email" size="35" required /> </div>
+                <div class="questionnaire last">Phone Number <input type="text" name="phoneNum" size="35" required />
+                </div>
+            </div>
+            <div id="formSideOne">
+                <div class="registration det">Lunch</div>
+                <div class="questionnaire">Meal Preference<input type="text" name="firstName" size="35" required />
+                </div>
+
+                <div class="registration det">Payment</div>
+
+                <div class="questionnaire payment">Payment Mode <input type="checkbox" name="Cash" size="35" /> Cash
+                    <input type="checkbox" name="Cheque" size="35" /> Cheque
+                    <input type="checkbox" name="Demand Draft" size="35" /> Demand Draft
+                </div>
+
+                <div class="questionnaire">DD/Cheque No. <input type="text" name="Cheque" size="35" required /> </div>
+
+                <div class="questionnaire">Drawn on(Bank Name) <input type="text" name="bankName" size="35" required />
+                </div>
+                <div class="questionnaire last">Payable at<input type="text" name="phoneNum" size="35" required />
+                </div>
+            </div>
+        </form>
+
+        <form id="finalSubmition">
+            <input type="submit" />
+            <input type="reset" />
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+.introduction{
+    background-color: #B33771;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 8px;
+    font-weight: bold;
+   
+    
+}
+#container{
+    border: 1px solid #B33771;
+    margin: 100px;
+    
+}
+.registration{
+    text-decoration: underline;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#levelOfExperiance{
+    border: none;
+}
+.partOne{
+    margin: 20px;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.questionnaire {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.last{
+    margin-bottom: 25px;
+    display: block;
+}
+
+#finalSubmition{
+   padding: 5px;
+    display: flex;
+    justify-content:center;
+    background-color: rgb(214, 205, 205);
+}
+#formSideOne{
+    width: 48%;
+}
+.det{
+    font-weight: lighter;
+}
+.payment{
+    display: flex;
+    justify-content: baseline;
+    vertical-align:baseline;
+
+}
+.lastwraper{
+    display: flex;
+ 
+}
