@@ -4,10 +4,7 @@ returned result is the sum of all elements which are greater than 20.
 2. Create a function using function expression named getNewArray with one parameter of String
 Array, return a new array which contains all string, length is greater than and equal to 5, and
 contains letter ‘a’.*/
-
-function sum() {
-    var numbers = [1, 2, 3, 4, 5];
-}
+console.log("question one opption one!");
 var numbers2 = [1, 2, 3, 4, 5, 63, 25, 50, 100];
 
 const a = numbers2.filter(function (elm, i, array) {
@@ -20,14 +17,6 @@ const a = numbers2.filter(function (elm, i, array) {
 console.log(a);
 
 console.log("question one opption two!");
-const tempArray = numbers2.filter(function (v) {
-    return v > 20;
-});
-console.log(tempArray);
-
-
-
-console.log("question one opption two!");
 const avg = numbers2
     .filter(elm => elm > 20
     )
@@ -35,15 +24,29 @@ const avg = numbers2
         return sum + current;
     }, 0);
 
-
+console.log(avg);
 console.log("question num two");
 
 
+var array1 = ['rediet', 'woldemariam', 'today', 'whatisyourname'];
 
-const strArr = ['apple', 'banana', 'strawberry', 'blueberry', 'mango', 'cat', 'dog', 'cow', 'egg'];
-const newArr = strArr
-.filter(v => v.includes('a') && v.length >= 5);
+const getNewArray = (strArray) => {
 
-console.log(newArr);
 
-// const getNewArray = function(strArr)
+
+    if (Array.isArray(strArray)) {
+
+        var newArray = strArray
+        .filter(v => v.includes('a') && v.length >= 5);
+
+        return newArray;
+
+    } else {
+
+        console.log("Invalid input")
+
+    }
+
+}
+console.log(getNewArray(['rediet', 'woldemariam', 'today', 'whatisyourname', 'ueue']));
+
