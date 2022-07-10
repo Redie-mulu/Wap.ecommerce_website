@@ -96,3 +96,7 @@ body{
     justify-content: center;
     text-align: center;
 }
+.productImages {
+    width: 50pt;
+    height: 25pt;
+}

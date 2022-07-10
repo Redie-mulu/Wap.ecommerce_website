@@ -1,13 +1,16 @@
 // in memeory storage
+
 let db = [];
+
 let counter = 0;
 
-module.exports=class Prouct {
-    constructor(id, name, description, price) {
+class Product {
+    constructor(id, name, image, price, stock) {
         this.id = id;
         this.name = name;
-        this.description = description;
+       this.image = image;
         this.price = price;
+        this.stock = stock;
     }
     // use increament id when ever we have new product id will increase by 1
     save() {
@@ -40,3 +43,11 @@ module.exports=class Prouct {
         return deletedProd;
     }
 }
+
+const product1 = new Product(1, "Node", "node.jpeg",9.99, 8);
+const product2 = new Product(2, "React", "react.jpeg",19.99, 5);
+const product3 = new Product(3, "Angular", "angular.jpeg",29.99, 13);
+db.push(product1);
+db.push(product2);
+db.push(product3);
+module.exports = Product;

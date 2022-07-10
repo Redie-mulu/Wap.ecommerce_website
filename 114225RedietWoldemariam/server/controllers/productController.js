@@ -6,7 +6,7 @@ exports.save = (req, res, next) => {
 }
 
 exports.getAll = (req, res, next) => {
-    res.status(200).json(Product.getAll());
+    res.status(200).json(Prouct.getAll());
 }
 
 exports.deleteById = (req, res, next) => {
