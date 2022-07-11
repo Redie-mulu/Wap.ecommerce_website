@@ -1,11 +1,12 @@
-window.onload = function(){
-   
+window.onload = function () {
+    document.getElementById('loginPage').style.display = 'block';
+    document.getElementById('mainContainer').style.display = 'none';
 
-    document.getElementById('loginBtn').onclick = function(){
+    document.getElementById('loginBtn').onclick = function () {
         console.log("login");
-        fetch('http://localhost:3000/login',{
+        fetch('http://localhost:3000/login', {
             method: 'POST',
-            body:JSON.stringify({
+            body: JSON.stringify({
                 username: document.getElementById('username').value,
                 password: document.getElementById('password').value
             }),
@@ -14,18 +15,23 @@ window.onload = function(){
             }
         }).then(response => response.json())
             .then(data => {
-                if(data.error){
+                if (data.error) {
                     //here is error
                     document.getElementById('errorMsg').innerHTML = data.error;
                 } else {
                     sessionStorage.setItem('accessToken', data.accessToken);
-                    // document.getElementById('login').remove();
-                    // document.getElementById('main-content').style.display = 'block';
+                    console.log( data.accessToken)
+                    showProductPage();
                     // fetchProduct();
-                    location.href="index.html";
-                    
+                    // location.href = "index.html";
+
                 }
             })
-            
+
     }
+}
+function showProductPage() {
+    document.getElementById('loginPage').style.display = 'none';
+    document.getElementById('mainContainer').style.display = 'block';
+    // .getElementById('main-content').style.display = 'block';
 }

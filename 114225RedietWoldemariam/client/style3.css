@@ -5,9 +5,9 @@
     font-size: 20px;
 
 }
-div {
+/* div {
     display:flex
-}
+} */
 .table{
     padding: 1px;
     border: 1px solid rgb(235, 13, 13);
@@ -99,4 +99,34 @@ body{
 .productImages {
     width: 50pt;
     height: 25pt;
+}
+#container{
+    display: flex;
+    justify-content: space-around;
+    border: 1px, solid, black;
+    background-color: #7ed6df;
+    border-top: 1px solid rgb(3, 3, 3);
+    border-bottom:1px solid rgb(3, 3, 3);;
+
+}
+h1{    
+    align-content: center;
+    margin: 50px;
+}
+
+#loginPage{
+   /* flex-direction: column; */
+    border: 1px solid black;
+    height: 700px;
+}
+.logInButton{
+    border: 1px solid black;
+    width: 70px;
+    height: 30px;
+    margin: 6px;
+    text-align: center;
+    background-color: white;
+}
+.addAndSub{
+    display: flex;
 }
