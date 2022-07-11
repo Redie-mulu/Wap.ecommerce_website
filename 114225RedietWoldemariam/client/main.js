@@ -10,12 +10,12 @@ console.log(userShoppingCart);
 window.onload = function () {
     userShoppingCart = getUserShoppingCart(userAccesToken);
 
-    if(userShoppingCart.length > 0) {
+    if (userShoppingCart.length > 0) {
         printShopingCart();
     }
     document.getElementById('loginPage').style.display = 'block';
     document.getElementById('mainContainer').style.display = 'none';
-      document.getElementById('loginBtn').onclick = function () {
+    document.getElementById('loginBtn').onclick = function () {
         console.log("login");
         fetch('http://localhost:3000/login', {
             method: 'POST',
@@ -34,14 +34,11 @@ window.onload = function () {
                 } else {
                     sessionStorage.setItem('accessToken', data.accessToken);
                     userShoppingCart = getUserShoppingCart(data.accessToken);
-                    if(userShoppingCart.length > 0) {
+                    if (userShoppingCart.length > 0) {
                         printShopingCart();
                     }
-                    console.log( data);
+                    console.log(data);
                     showProductPage();
-                   
-                    // fetchProduct();
-                    // location.href = "index.html";
                 }
             })
 
@@ -73,34 +70,19 @@ window.onload = function () {
             });
             document.getElementById('product_table').innerHTML = html;
         });
-
-    // document.getElementById('testBtn').onclick = fetchProduct;
 }
 
 function showProductPage() {
     document.getElementById('loginPage').style.display = 'none';
     document.getElementById('mainContainer').style.display = 'block';
-    // .getElementById('main-content').style.display = 'block';
 }
-
-// function showError(message) {
-//     document.getElementById('errorMsg').innerHTML = message;;
-//     setTimeout(() => {
-//         document.getElementById('errorMsg').innerHTML = '';
-//     }, 3000);
-// }
 let addToCart = function (productId) {
 
     let product = productArray.filter(val => val.id == productId)[0];
-    addProuductToShoppingCart(product); 
+    addProuductToShoppingCart(product);
     printShopingCart();
-    // JSON.stringify(userShoppingCart)
-    // JSON.parse(userShopp)
-
     localStorage.setItem(getUserId(sessionStorage.getItem("accessToken")), JSON.stringify(userShoppingCart));
 
-    // console.log(userShoppingCart);
-    
 }
 let printShopingCart = function () {
     let html = ``;
@@ -114,39 +96,37 @@ let printShopingCart = function () {
                 <td >${prod.quantity}</td>
             
             </tr>`
-        // <button onclick='addToCart()' id....
     });
-    // <button onclick='addToCart()' id....
     document.getElementById('shoppingCart').innerHTML = html;
 }
-let addProuductToShoppingCart = function(product) {
-    if(userShoppingCart.map(val => val.id).includes(product.id)){
-       let order =  userShoppingCart.filter(val => val.id == product.id)[0];
-       if(product.stock == order.quantity) {
+let addProuductToShoppingCart = function (product) {
+    if (userShoppingCart.map(val => val.id).includes(product.id)) {
+        let order = userShoppingCart.filter(val => val.id == product.id)[0];
+        if (product.stock == order.quantity) {
             alert("the item is out of stock!");
             return;
-       }
+        }
         order.quantity += 1;
         order.total = order.price * order.quantity;
     }
-    else{
+    else {
         userShoppingCart.push({
-            id : product.id,
+            id: product.id,
             name: product.name,
-            price:product.price,
+            price: product.price,
             total: product.price,
-            quantity:1
+            quantity: 1
         });
     }
 }
-let getUserId = function(accessToken) {
-    
+let getUserId = function (accessToken) {
+
     return accessToken.split('-')[0];
- }
-let getUserShoppingCart = function(userAccesToken){
+}
+let getUserShoppingCart = function (userAccesToken) {
     let userId = getUserId(userAccesToken);
     let userShoppingCartJsonString = localStorage.getItem(userId);
-    return JSON.parse(userShoppingCartJsonString)||[];
+    return JSON.parse(userShoppingCartJsonString) || [];
 
 }
 
