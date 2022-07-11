@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <link href="./style3.css" type="text/css" rel="stylesheet" />
+    <link href="./loginPage.css" type="text/css" rel="stylesheet" />
+    <script src="./login.js" type="text/javascript"></script>
+    <script src="./main.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <p id="errorMsg"></p>
+    <div id="loginPage">
+        <div id=container>
+            <div class="item"><img src="./happy.jpeg" alt="myHappyLog" width="50" height="40" /> </div>
+            <div class="item">
+                <form>
+                    username:<input type="text" id="username" name="username"/><br />
+                    password:<input type="password" id="password" name="password" />
+
+                </form>
+            </div>
+            
+            <button id="loginBtn">Login</button>
+
+        </div>
+        <h1>Welcome to my store!</h1>
+    </div>
+
+    <!-- user would be able to access her/his shoping cart after loging-->
+    <div id="mainContainer">
+        <p id="introduction">My Shoping Cart</p>
+
+        <div id=container0>
+            <div class="item"><img src="./happy.jpeg" alt="myHappyLog" width="50" height="40" /> </div>
+            <div class="item">Welcome, Rediet </div>
+            <button class="logOutButton"><a class="logOut" href="./happy.jpeg">logOut</a></button>
+
+        </div>
+
+
+        <span class="shopingOwner">product list</span>
+
+        <div class="container">
+            <table id="product_table" class="table">
+                <!-- <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <th scope="row">Node.js</th>
+                        <td>9.99</td>
+                        <td><img class="productImages" src="http://localhost:3000/images/node.jpeg"></td>
+                        <td>8</td>
+                        <td><img src="./cart3.svg" alt="cart" width="40" height="30"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <th scope="row">React</th>
+                        <td>19.99</td>
+                        <td><img class="productImages" src="http://localhost:3000/images/react.jpeg"></td>
+                        <td>5</td>
+                        <td><img src="./cart3.svg" alt="cart" width="40" height="30"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <th scope="row">Angular</th>
+                        <td>29.9</td>
+                        <td><img class="productImages" src="http://localhost:3000/images/angular.jpeg"></td>
+                        <td>13</td>
+                        <td><img src="./cart3.svg" alt="cart" width="40" height="30"></td>
+                    </tr> -->
+                <!-- </tbody> -->
+            </table>
+        </div>
+
+        <span class="shopingOwner">your shopping cart</span>
+
+         <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">price</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="shoppingCart">
+                   <!-- <tr>
+                        <th scope="row">Node.js</th>
+                        <td>9.99</td>
+                        <td>9.99</td>
+                        <td class="last"> 
+                             <div class="addAndSub">
+                                <button>-</button>
+                                <input class="input" type="number" name="quantity" size="3" maxlength="4" min="1"
+                                    value="1" />
+                                <input type="button" value="+">
+                            </div>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <th scope="row">Angular</th>
+                        <td>29.99</td>
+                        <td>290.99</td>
+                        <td class="last">
+                            <div class="addAndSub">
+                                <button>-</button>
+                                <input class="input" type="number" name="quantity" size="3" maxlength="4" min="1"
+                                    value="1" />
+                                <input type="button" value="+">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="total">
+                        <th scope="row">Angular</th> 
+                        <td colspan="4">
+                            <span id="total-title">Total</span>
+                            <span id="total-price"> 300.98</span>
+                        </td> 
+                       
+                        <td class="total">
+                            <div class="total-title">Total</div>
+                            <div class="total-price">$0</div>
+                        </td> 
+                       
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        <div id="endShopping">
+            <button class="placeOrderButton"> <a class="logOut"
+                    href="https://www.amazon.com/cart/smart-wagon?newItems=4ee17a01-3365-4630-96d4-b8d46db636c6,1">place
+                    order</a> </button>
+        </div>
+    </div>
+
+
+    <div id="checker">
+        <a href=" https://validator.w3.org/nu/?doc=https%3A%2F%2Fredie-mulu.github.io%2FWap.github.io%2F">
+            <img src="../../1200px-Valid_XHTML_1.0.svg.png" alt="validateor picture" width="100" height="40" />
+        </a>
+        <a
+            href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fredie-mulu.github.io%2FWap.github.io%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">
+            <img src="../../css_checker.png" alt="validateor picture" width="100" height="40" />
+        </a>
+
+    </div>
+</body>
+
+</html>

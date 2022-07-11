@@ -1,0 +1,132 @@
+#introduction {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20px;
+
+}
+/* div {
+    display:flex
+} */
+.table{
+    padding: 1px;
+    border: 1px solid rgb(235, 13, 13);
+    background-color: #7ed6df
+}
+#mainContainer {
+    border: 1px solid black;
+}
+th{
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+}
+
+.shopingOwner {
+    
+    color: rgb(5, 5, 5);
+    background-color: #9AECDB;
+    padding-left: 115px;
+    text-decoration: dotted;
+}
+#total {
+    text-align: end;
+    border: 1x solid black;
+}
+
+body{
+    margin: 200px;
+    background-color: #c2eaf193;
+}
+#container0 {
+    background-color: #7ed6df;
+    border-top: 1px solid rgb(3, 3, 3);
+    border-bottom:1px solid rgb(3, 3, 3);;
+    display: flex;
+    justify-content:space-around;
+    
+}
+.item {
+   margin-top: 6px;
+}
+
+.logOutButton {
+    border: 1px solid black;
+    width: 70px;
+    height: 30px;
+    margin: 6px;
+    text-align: center;
+    background-color: white;
+} 
+#totalspan{
+    
+  border: 1px solid black;
+
+}
+
+#mainContainer{
+    flex-direction: column;
+    background-color: #9AECDB;
+}
+#endShopping {
+    display: flex;
+    justify-content:end;
+    margin-right: 25px;
+    margin-bottom: 5px;
+}
+.input{
+     display: flex;
+    justify-content:center;
+    size: 10px;
+    width: 40px;
+   
+}
+#last{
+    display: flex;
+    justify-content:center;
+
+}
+#outerBorder {
+   border: 1px solid black;
+   
+}
+#checker{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.productImages {
+    width: 50pt;
+    height: 25pt;
+}
+#container{
+    display: flex;
+    justify-content: space-around;
+    border: 1px, solid, black;
+    background-color: #7ed6df;
+    border-top: 1px solid rgb(3, 3, 3);
+    border-bottom:1px solid rgb(3, 3, 3);;
+
+}
+h1{    
+    align-content: center;
+    margin: 50px;
+}
+
+#loginPage{
+   /* flex-direction: column; */
+    border: 1px solid black;
+    height: 700px;
+}
+.logInButton{
+    border: 1px solid black;
+    width: 70px;
+    height: 30px;
+    margin: 6px;
+    text-align: center;
+    background-color: white;
+}
+.addAndSub{
+    display: flex;
+}
