@@ -1,41 +1,63 @@
-let counter = 0;
+let products = [
+    {
+        "id": 1,
+        "product_name": "Node",
+        "product_price": 9.99,
+        "product_stock": 8
+    },
+    {
+        "id": 2,
+        "product_name": "React",
+        "product_price": 19.99,
+        "product_stock": 5
+    },
+    {
+        "id": 3,
+        "product_name": "Angular",
+        "product_price": 29.99,
+        "product_stock": 13
+    }
+];
 
 class Product {
     constructor(id, name, image, price, stock) {
         this.id = id;
-        this.name = name;
+        this.product_name = name;
         this.image = image;
-        this.price = price;
+        this.product_price = price;
         this.stock = stock;
     }
+
+
     // use increament id when ever we have new product id will increase by 1
     save() {
         this.id = ++counter;
-        db.push(this);
+        products.push(this);
         return this;
     }
     edit() {
         const index = db.findIndex(product => product.id == this.id);
-        db.splice(index, 1, this);
+        products.splice(index, 1, this);
         return this;
     }
     static getAll() {
-        return db;
+        return products;
     }
 
     static findById(productId) {
-        const index = db.findIndex(prod => prod.id === productId);
+        const index = products.findIndex(prod => prod.id == productId);
         if (index > -1) {
-            return db[index];
+            return products[index];
         }
         else {
-            throw new Error('NoT Forund');
+            throw new Error('Not Found');
         }
     }
+    
     static deleteById(prodId) {
-        const index = db.findIndex(product => product.id == prodId);
+        const index = products.findIndex(product => product.id == prodId);
         const deletedProd = db[index];
-        db.splice(index, 1);
+        products.splice(index, 1);
         return deletedProd;
     }
 }
