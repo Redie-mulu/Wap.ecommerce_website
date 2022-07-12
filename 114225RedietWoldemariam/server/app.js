@@ -2,53 +2,32 @@ const express = require("express");
 const path = require('path');
 const cors = require('cors');
 const productRouter = require('./routes/productRouter')
-const users = require("./data/user").users;
+const {validateToken} = require("./middlewares/userMiddleware");
+const userRouter = require("./routes/userRouter");
+const cartRouter = require("./routes/cartRouter");
 
-const data = require('./data/user');
+const data = require('./models/user');
+const { Console } = require("console");
 const app = express();
+
 // to be able to process json add this line of code 
-app.use(express.json()); 
+app.use(express.json());
 app.use(cors());
-app.use('/products', productRouter);
 
+app.use('/users', userRouter);
+app.use('/products', validateToken, productRouter);
+app.use('/cart', validateToken, cartRouter);
 
-// let db = data.userDB;
-// let products = data.productDB;
-// let carts = [];
-
-app.post('/login', (req, res, next)=> {
-  const user = users.find(user => user.username === req.body.username && user.password === req.body.password);
-  if(user){
-      let token = `${user.id}-${user.username}-${Date.now().toString()}`;
-      user.accessToken = token;
-      res.json({accessToken: token});
-  } else {
-      res.json({error: 'Invalid username and password!'});
-      // throw new Error('dfdfdf');
-  }
-});
-
-app.use(express.static(path.join(__dirname,'public')));
+app.use("/resources", express.static(path.join(__dirname, 'public')));
 
 app.use((err, req, res, next) => {
-    console.log(err);
-    console.log(err);
-    if (err.message === 'NOT Found') {
-      res.status(404).json({error: err.message});
-    } else if (err.message === 'Authentication Failure') {
-      res.status(401).json({"msg": "You have no power here!", "authentication": "failure"});
-    } else {
-      res.status(500).json({error: 'Something is wrong! Try later'});
-    }
-  });
-//  get all the list of products
-  // app.get('/products', (req, res, next) => {
-  //   res.json({title: 'our products', products})
-  // });
-
-  // app.get('/cart/add/:userid/:productid', (req, res, next) => {
-    
-  // })
-
-
+  const errMessage = err.message;
+  if (err.message === 'NOT Found') {
+    res.status(404).json({ error: err.message });
+  } else if (err.message === 'Authentication Failure') {
+    res.status(401).json({ "msg": "You have no power here!", "authentication": "failure" });
+  } else {
+    res.status(500).json({ error: errMessage });
+  }
+});
 app.listen(3000, () => console.log('listening to 3000...'));
