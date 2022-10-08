@@ -18,8 +18,8 @@ app.use('/users', userRouter);
 app.use('/products', validateToken, productRouter);
 app.use('/cart', validateToken, cartRouter);
 
-app.use("/resources", express.static(path.join(__dirname, 'public')));
-
+app.use("/resources", express.static(path.join(__dirname, 'public', 'images')));
+// what isthis line about?
 app.use((err, req, res, next) => {
   const errMessage = err.message;
   if (err.message === 'NOT Found') {

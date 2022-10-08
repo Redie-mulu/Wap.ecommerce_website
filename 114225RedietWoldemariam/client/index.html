@@ -21,16 +21,16 @@
 </head>
 
 <body>
-    
+
     <div class="top-panel">
         <div class="item"><img src="./happy.jpeg" alt="myHappyLog" width="50" height="40" /> </div>
         <div class="item" id="welcome-div"></div>
-        <div id="login-div"> 
-                <form>
-                    username:<input type="text" id="username" name="username"/><br />
-                    password:<input type="password" id="password" name="password" />
-                    <button id="loginBtn">Login</button>
-                </form>
+        <div id="login-div">
+            <form>
+                username:<input type="text" id="username" name="username" /><br />
+                password:<input type="password" id="password" name="password" />
+                <button id="loginBtn">Login</button>
+            </form>
         </div>
         <div id="logout-div">
             <button type="button" id="logoutBtn">logOut</button>
@@ -40,22 +40,14 @@
     <h1 id="welcome-text">Welcom to my store!</h1>
     <!-- user would be able to access her/his shoping cart after loging-->
     <div id="mainContainer">
-        
+
         <p id="introduction">My Shoping Cart</p>
-
-        <div id=container0>
-            <div class="item"><img src="./happy.jpeg" alt="myHappyLog" width="50" height="40" /> </div>
-            
-            
-
-        </div>
-
 
         <span class="shopingOwner">product list</span>
 
         <div class="container" id="product-div">
             <table class="table">
-               <thead>
+                <thead>
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Name</th>
@@ -66,38 +58,14 @@
                     </tr>
                 </thead>
                 <tbody id="product_table">
-                   <!--   <tr>
-                        <td>1</td>
-                        <th scope="row">Node.js</th>
-                        <td>9.99</td>
-                        <td><img class="productImages" src="http://localhost:3000/images/node.jpeg"></td>
-                        <td>8</td>
-                        <td><img src="./cart3.svg" alt="cart" width="40" height="30"></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <th scope="row">React</th>
-                        <td>19.99</td>
-                        <td><img class="productImages" src="http://localhost:3000/images/react.jpeg"></td>
-                        <td>5</td>
-                        <td><img src="./cart3.svg" alt="cart" width="40" height="30"></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <th scope="row">Angular</th>
-                        <td>29.9</td>
-                        <td><img class="productImages" src="http://localhost:3000/images/angular.jpeg"></td>
-                        <td>13</td>
-                        <td><img src="./cart3.svg" alt="cart" width="40" height="30"></td>
-                    </tr> -->
                 </tbody>
             </table>
         </div>
 
         <span class="shopingOwner">your shopping cart</span>
 
-         <div class="container">
-            <p id="no-items">There is no item in Your shopping cart?</p>
+        <div class="container">
+            <p id="no-items">There is no item in Your shopping cart!</p>
             <table class="table" id="cart-table">
                 <thead>
                     <tr>
@@ -108,65 +76,15 @@
                     </tr>
                 </thead>
                 <tbody id="shoppingCart">
-                   <!-- <tr>
-                        <th scope="row">Node.js</th>
-                        <td>9.99</td>
-                        <td>9.99</td>
-                        <td class="last"> 
-                             <div class="addAndSub">
-                                <button>-</button>
-                                <input class="input" type="number" name="quantity" size="3" maxlength="4" min="1"
-                                    value="1" />
-                                <input type="button" value="+">
-                            </div>
-                        </td>
-                    </tr> 
-                    <tr>
-                        <th scope="row">Angular</th>
-                        <td>29.99</td>
-                        <td>290.99</td>
-                        <td class="last">
-                            <div class="addAndSub">
-                                <button>-</button>
-                                <input class="input" type="number" name="quantity" size="3" maxlength="4" min="1"
-                                    value="1" />
-                                <input type="button" value="+">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr id="total">
-                        <th scope="row">Angular</th> 
-                        <td colspan="4">
-                            <span id="total-title">Total</span>
-                            <span id="total-price"> 300.98</span>
-                        </td> 
-                       
-                        <td class="total">
-                            <div class="total-title">Total</div>
-                            <div class="total-price">$0</div>
-                        </td> 
-                       
-                    </tr> -->
+             
                 </tbody>
             </table>
         </div>
         <div id="endShopping">
-            <button class="placeOrderButton" onclick="placeOrder()" > place
-                    order </button>
+            <button class="placeOrderButton" onclick="placeOrder()"> place
+                order </button>
         </div>
     </div>
-
-
-    <!-- <div id="checker">
-        <a href=" https://validator.w3.org/nu/?doc=https%3A%2F%2Fredie-mulu.github.io%2FWap.github.io%2F">
-            <img src="../../1200px-Valid_XHTML_1.0.svg.png" alt="validateor picture" width="100" height="40" />
-        </a>
-        <a
-            href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fredie-mulu.github.io%2FWap.github.io%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">
-            <img src="../../css_checker.png" alt="validateor picture" width="100" height="40" />
-        </a>
-
-    </div> -->
 </body>
 
 </html>

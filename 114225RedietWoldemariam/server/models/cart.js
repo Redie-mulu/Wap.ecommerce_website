@@ -34,7 +34,10 @@ class Cart {
 
     static addProduct(username, product) {
         const userIdx = cart.findIndex(usr => usr.username == username);
-        if(product.product_stock <= 0) throw new Error(`the product id [${product.id}] is not in the stock!`);
+        if(product.product_stock <= 0) {
+            // alert()
+            throw new Error(`the product [${product_name}] is not in the stock!`);
+        }
         if (userIdx > -1) {
             const user = cart[userIdx];
             const productIdx = user.products.findIndex(prd => prd.id == product.id);
@@ -88,22 +91,24 @@ class Cart {
             if (productIdx > -1) {
                 if (product) {
                     const stock = product.product_stock;
-                    if (stock == 0 || request_quantity == 0) {
+                    if (stock == 0 || request_quantity <= 0) {
                         // delete this product out of Cart;
                         userCart.products.splice(productIdx, 1);
-                    } else if (stock > request_quantity) {
+                    } else if (stock >= request_quantity) {
                         userCart.products[productIdx].quantity = request_quantity;
                         
-                    } else {
+                    }  
+              
+                    else {
                         userCart.products[productIdx].quantity = stock;
                         throw new Error(`${product.product_name} has only ${stock}. Your cart is reloaded.`);
                     }
                 } else {
-                    throw new Error(`Product id [${product_id}] is not found.`);
+                    throw new Error(`Product [${product_name}] is not found.`);
                 }
             }
             else {
-                throw new Error(`the product id [${product_id}] is not in the stock!`);
+                throw new Error(`the product [${product_name}] is not in the stock!`);
             }
         } else {
             throw new Error('user not found!');
@@ -128,11 +133,7 @@ class Cart {
             cart[userIdx] = []
         }
     }
-    // remove product
-    static removeProduct() {
-
-    }
-
+    
 }
 
 module.exports = Cart;

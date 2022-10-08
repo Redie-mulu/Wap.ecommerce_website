@@ -3,21 +3,25 @@ let products = [
         "id": 1,
         "product_name": "Node",
         "product_price": 9.99,
-        "product_stock": 8
+        "product_stock": 8,
+        "image":"/resources/node.jpeg"
     },
     {
         "id": 2,
         "product_name": "React",
         "product_price": 19.99,
-        "product_stock": 5
+        "product_stock": 5,
+        "image":"/resources/react.jpeg"
     },
     {
         "id": 3,
         "product_name": "Angular",
         "product_price": 29.99,
-        "product_stock": 13
+        "product_stock": 13,
+        "image":"/resources/angular.jpeg"
     }
 ];
+let counter = 0;
 
 class Product {
     constructor(id, name, image, price, stock) {
@@ -56,7 +60,7 @@ class Product {
     
     static deleteById(prodId) {
         const index = products.findIndex(product => product.id == prodId);
-        const deletedProd = db[index];
+        const deletedProd = products[index];
         products.splice(index, 1);
         return deletedProd;
     }
