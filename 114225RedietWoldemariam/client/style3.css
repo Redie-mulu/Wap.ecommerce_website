@@ -8,8 +8,8 @@
 
 body {
     width: 90%;
-    border: 1px solid blue;  
-    background-color: #c2eaf193; 
+    border: 1px solid black;
+    background-color: #c2eaf193;
     height: 90vh;
     margin: auto;
 }
@@ -21,31 +21,35 @@ div.top-panel {
     height: 100px;
     flex-direction: row;
     /* background-color: red; */
-    border: 1px solid yellow;
+    border: 1px solid black;
 }
 
-.table{
+.table {
     padding: 1px;
     border: 1px solid rgb(235, 13, 13);
-    background-color: #7ed6df
+    background-color: #d1d8e0;
 }
+
 #mainContainer {
     border: 1px solid black;
 }
-th{
+
+th {
     border: 1px solid black;
 }
-td{
+
+td {
     border: 1px solid black;
 }
 
 .shopingOwner {
-    
+
     color: rgb(5, 5, 5);
-    background-color: #9AECDB;
+    background-color: #a4b0be;
     padding-left: 115px;
     text-decoration: dotted;
 }
+
 #total {
     text-align: end;
     border: 1x solid black;
@@ -54,14 +58,12 @@ td{
 #container0 {
     background-color: #7ed6df;
     border-top: 1px solid rgb(3, 3, 3);
-    border-bottom:1px solid rgb(3, 3, 3);;
+    border-bottom: 1px solid rgb(3, 3, 3);
+    ;
     display: flex;
-    justify-content:space-around;
-    
+    justify-content: space-around;
+
 }
-/* .item {
-   margin-top: 6px;
-} */
 
 .logOutButton {
     border: 1px solid black;
@@ -70,74 +72,72 @@ td{
     margin: 6px;
     text-align: center;
     background-color: white;
-} 
-#totalspan{
-    
-  border: 1px solid black;
+}
+
+#totalspan {
+
+    border: 1px solid black;
 
 }
 
-#mainContainer{
+#mainContainer {
     flex-direction: column;
-    background-color: #9AECDB;
+    background-color: #ffffff;
 }
+
 #endShopping {
     display: flex;
-    justify-content:end;
+    justify-content: end;
     margin-right: 25px;
     margin-bottom: 5px;
 }
-.input{
-     display: flex;
-    justify-content:center;
+
+.input {
+    display: flex;
+    justify-content: center;
     size: 10px;
     width: 40px;
-   
-}
-#last{
-    display: flex;
-    justify-content:center;
 
 }
-#outerBorder {
-   border: 1px solid black;
-   
+
+#last {
+    display: flex;
+    justify-content: center;
+
 }
-#checker{
+
+#outerBorder {
+    border: 1px solid black;
+
+}
+
+#checker {
     display: flex;
     justify-content: center;
     text-align: center;
 }
+
 .productImages {
     width: 50pt;
     height: 25pt;
 }
-#container{
+
+#container {
     display: flex;
     justify-content: space-around;
     border: 1px, solid, black;
     background-color: #7ed6df;
     border-top: 1px solid rgb(3, 3, 3);
-    border-bottom:1px solid rgb(3, 3, 3);;
+    border-bottom: 1px solid rgb(3, 3, 3);
+    ;
 
 }
-h1{    
+
+h1 {
     align-content: center;
     margin: 50px;
 }
-/* 
-#loginPage{
-    border: 1px solid black;
-    height: 700px;
-}
-.logInButton{
-    border: 1px solid black;
-    width: 70px;
-    height: 30px;
-    margin: 6px;
-    text-align: center;
-    background-color: white;
-} */
-.addAndSub{
+
+.addAndSub {
     display: flex;
 }
